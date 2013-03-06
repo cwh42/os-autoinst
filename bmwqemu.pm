@@ -978,6 +978,7 @@ sub waitinststage($;$$) {
 		if($prestandstillwarning) {
 			timeout_screenshot();
 			diag "WARNING: waited too long for stage=$stage";
+                        die "WARNING: waited too long for stage=$stage";
 			$prestandstillwarning=0;
 			return 2;
 		}
@@ -985,6 +986,7 @@ sub waitinststage($;$$) {
 	}
 	timeout_screenshot() if($timeout>1);
 	fctres('waitinststage', "stage=$stage timed out after $timeout");
+        die "waitinststage stage=$stage timed out after $timeout";
 	return 0;
 }
 
