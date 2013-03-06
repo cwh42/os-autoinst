@@ -363,7 +363,7 @@ sub sendkey($) {
 	$backend->sendkey($key);
 	my @t=gettimeofday();
 	push(@keyhistory, [$t[0]*1000000+$t[1], $key]);
-	sleep(0.25);
+	sleep(0.15);
 }
 
 =head2 sendkeyw

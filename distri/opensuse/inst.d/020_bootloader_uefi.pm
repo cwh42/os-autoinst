@@ -18,7 +18,7 @@ sub run()
 	if($ENV{ZDUP} || $ENV{WDUP}) {
 		qemusend "eject -f ide1-cd0";
 		qemusend "system_reset";
-		sleep 10;
+		sleep 5;
 		sendkey "ret"; # boot
 		return;
 	}
@@ -55,19 +55,19 @@ if($ENV{RES1024}) { # default is 800x600
 	#}
 	#sendkey "ret";
 } else {
-    sleep 10;
+    #sleep 10;
     sendautotype("video=800x600-16 ");
 }
 
 #sendautotype("nohz=off "); # NOHZ caused errors with 2.6.26
 #sendautotype("nomodeset "); # coolo said, 12.3-MS0 kernel/kms broken with cirrus/vesa #fixed 2012-11-06
 if(!$ENV{NICEVIDEO}) {
-	sleep 15; sendautotype("console=ttyS0 "); # to get crash dumps as text
-	sleep 15; sendautotype("console=tty "); # to get crash dumps as text
+	sleep 3; sendautotype("console=ttyS0 "); # to get crash dumps as text
+	sleep 3; sendautotype("console=tty "); # to get crash dumps as text
 	my $e=$ENV{EXTRABOOTPARAMS};
 #	if($ENV{RAIDLEVEL}) {$e="linuxrc=trace"}
-	if($e) {sleep 10;sendautotype("$e ");}
-	sleep 15; # workaround slow gfxboot drawing 662991
+	if($e) {sleep 5;sendautotype("$e ");}
+	sleep 10; # workaround slow gfxboot drawing 662991
 }
 #sendautotype("kiwidebug=1 ");
 

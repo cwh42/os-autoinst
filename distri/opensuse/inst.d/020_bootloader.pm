@@ -14,12 +14,12 @@ sub run()
 	waitinststage("syslinuxbootloader",15);
 	waitinststage("syslinuxbootloader-loaded",5);
 	if($ENV{QEMUVGA} && $ENV{QEMUVGA} ne "cirrus") {
-		sleep 5;
+		sleep 2;
 	}
 	if($ENV{ZDUP} || $ENV{WDUP}) {
 		qemusend "eject -f ide1-cd0";
 		qemusend "system_reset";
-		sleep 10;
+		sleep 5;
 		sendkey "ret"; # boot
 		return;
 	}
@@ -75,8 +75,8 @@ if($ENV{RES1024}) { # default is 800x600
 #sendautotype("nomodeset "); # coolo said, 12.3-MS0 kernel/kms broken with cirrus/vesa #fixed 2012-11-06
 sleep 15; sendautotype("video=800x600-16 ");
 if(!$ENV{NICEVIDEO}) {
-	sleep 15; sendautotype("console=ttyS0 "); # to get crash dumps as text
-	sleep 15; sendautotype("console=tty "); # to get crash dumps as text
+	sleep 3; sendautotype("console=ttyS0 "); # to get crash dumps as text
+	sleep 3; sendautotype("console=tty "); # to get crash dumps as text
 	my $e=$ENV{EXTRABOOTPARAMS};
 #	if($ENV{RAIDLEVEL}) {$e="linuxrc=trace"}
 	if($e) {sleep 10;sendautotype("$e ");}

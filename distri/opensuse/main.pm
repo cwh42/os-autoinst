@@ -11,7 +11,9 @@ sub installrunfunc
 	$test->take_screenshot;
 }
 
-waitinststage "bootloader",12; # wait for welcome animation to finish
+my $timeout = 12;
+$timeout+=6 if($ENV{UEFI});
+waitinststage "bootloader",$timeout; # wait for welcome animation to finish
 
 if($ENV{LIVETEST} && ($ENV{LIVECD} || $ENV{PROMO})) {
 	$username="linux"; # LiveCD account
