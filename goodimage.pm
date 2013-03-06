@@ -43,7 +43,8 @@ bdcf5eae30d70c3fea49ec7db97969e2 instfail
 2b99e9973a6d0fc8d5e5beb74f088b16 bootloader-grub-11.0
 232cb27cbf4dafe0fc49900865b5548c bootloader-grub
 f74242b1f62bdbc7e3d6f060ceab7e0a bootloader-grub0620
-88fde8fe07e0371ea8618c508701034c bootloader-grub2-12.3
+88fde8fe07e0371ea8618c508701034c bootloader-grub2-cd-12.3
+9b5aea4dea5c87dc17736faa4d665d36 syslinuxbootloader-loaded-cd-12.3
 405b5f7e914749f8adc799a4220d56a6 bootloader-grub2-12.3-installed-blackbg
 7037bb735a64f3b5c65e009dbfb59b76 syslinuxbootloader-1044
 7964d6a7dcf973182a1b96287a3550c2 syslinuxbootloader-0314
@@ -53,7 +54,7 @@ a3aa18ef5e5dbf9e553105aade7faf52 syslinuxbootloader-loaded-12.1
 56b9eb4f1196d43002154796ec7fa203 syslinuxbootloader-12.2Beta
 da3c5a7c3a53cedcadd1604296b28d73 syslinuxbootloader-12.3RC1
 e9f109f901aa9e13c85e419d4923724d syslinuxbootloader-12.3RC1-livecddarkgray
-0ee1d1cf5d3e349934de179d88a54611 syslinuxbootloader-12.3RC2-vbox
+0ee1d1cf5d3e349934de179d88a54611 syslinuxbootloader-loaded-cd-12.3RC2-vbox
 33af848897baea7919c430d7adb6d9f2 initializinggnome
 bbe0d620ec01763f2a01993caaed1e88 welcome-11.2
 7ea9ca7bfe7277145920de67c2212a1d welcome
@@ -81,6 +82,7 @@ b9b4cf11ac2f313bae3b75d9239281c2 systemanalysis-net0620
 18e75f03fc8d6a3fa97ee6e53b9d8c38 addon-selection
 977564ea1151bb571e9aa9efbaa4cd7b timezone-11.2
 e6141b40e61746e1cddbf5402f2cfc2b timezone
+6bac8485408e819536dcc3614244d7b5 timezone-12.3-dvd
 a43e0ffec78df3af3e509e56a48f1e6f timezone
 1b8d474761b814b7a50496c494b6c4cc timezone
 29a8ce1da88163b13858dc0614069e5a timezone
@@ -158,6 +160,7 @@ d2a0411c2bd7a346ce7478194ccd6b3a performinstallation
 92c7cbb29bdb1becadfa33ffde2e8679 performinstallation
 488e812e97954956b4f27094fb577bd7 performinstallation
 d506a2d8867bd562c568bfced604f50f performinstallation
+336606941b8c9bbf49e75098214fbec7 performinstallation-12.3
 dc610bc01e6a59a1ec2b1a8a2b137efd performinstallation-net0620
 53a03f5d4207dcc8955b99c1d9b37558 performinstallation-net1044
 9709c31f6c1eaf10a56095f508c7a3bb performinstallation-net0620-addon
@@ -219,6 +222,7 @@ d286d6a7113fb86c1f0dda4ef80078d6 automaticconfiguration-gnome-12.1-0132
 1dd951c83f7072e9650b8eb41a4e8ef1 automaticconfiguration-12.1-0193
 7b6b827fed89a0ba0d5275ae1a4abc92 automaticconfiguration-12.1-0250-addon
 0db6d0f55610ce984acd4426d1753eb8 users
+ff14c5d9893162d505161d0ed82823f4 booted-kdestartscreen-12.3
 cc752e0fd5b766ca9f2d07ee3c3566c4 booted-kdestartscreen
 17d05a3d07d24a9f081eea706f4551b8 booted-kdm-11.3
 abf4721ff7f608a7b68cd0e0b2979a24 booted-KDE-11.2
