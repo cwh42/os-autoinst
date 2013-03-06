@@ -6,7 +6,7 @@ use strict;
 if(!@ARGV) { die "need arg";}
 
 my $file;
-my @params = qw(convert -fill none -stroke purple -pointsize 10);
+my @params = qw(convert -fill none -stroke cyan -pointsize 10);
 my @cmd;
 
 my $files = join(' ', @ARGV);
@@ -20,12 +20,13 @@ while( my $line = <IN> ) {
         @cmd = @params;
     }
 
-    if( $line =~ /^stage=(\S*)\s(\S+)\s(\d+,\d+,\d+,\d+)\s(\S+)/) {
-        my ($stage, $md5, $rect, $flags) = ($1, $2, $3, $4);
+    if( $line =~ /^stage=(\S*)\s(\S+)\s(\d+,\d+,\d+,\d+)/) {
+        my ($stage, $md5, $rect) = ($1, $2, $3);
         
         my ($xstart,$ystart,$xsize,$ysize) = split(/,/,$rect);
         push @cmd, '-draw', sprintf('rectangle %d,%d %d,%d', $xstart, $ystart, $xstart+$xsize, $ystart+$ysize);
         push @cmd, '-draw', sprintf("text %d,%d '%s'", $xstart+2, $ystart+10, $rect);
+        push @cmd, '-draw', sprintf("text %d,%d '%s'", $xstart+2, $ystart+20, $stage);
     }
 
     if( $line =~ /time=\S+/ ) {
